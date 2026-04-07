@@ -1,0 +1,14 @@
+:root {
+    --container-width: 1320px;
+    --container-padding-x: 24px;
+    --container-padding-mobile-x: 16px;
+
+    --font-family: 'Roboto', sans-serif;
+
+    --color-white: #ffffff;
+
+    --color-main: #2196f3;
+    --color-hover: #1e88e5;
+
+    --transition-duration: 0.2s;
+}
