@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 const Header: FC = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.container}>
+            <div className="container">
                 <nav>
                     <ul className={styles.nav__list}>
                         <li className={styles.list__item}>

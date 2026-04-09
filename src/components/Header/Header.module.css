@@ -24,11 +24,6 @@
     background-color: var(--color-hover);
 }
 
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-}
-
 @media (max-width: 1024px) {
     .list__item a {
         padding: 20px 17px;

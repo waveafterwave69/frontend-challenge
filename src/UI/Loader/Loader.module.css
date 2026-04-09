@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.loader {
+    width: 150px;
+}
+
+@media (max-width: 1024px) {
+    .loader {
+        width: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loader {
+        width: 120px;
+    }
+}
