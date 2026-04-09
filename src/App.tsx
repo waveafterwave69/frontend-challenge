@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
+import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom' // Используем createHashRouter
 import Header from './components/Header/Header'
 import MainPage from './pages/MainPage/MainPage'
 import FavoritePage from './pages/FavoritePage/FavoritePage'
@@ -14,17 +14,17 @@ const Layout = () => {
     )
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <Layout />,
         children: [
             {
-                path: '/',
+                index: true,
                 element: <MainPage />,
             },
             {
-                path: '/favorites',
+                path: 'favorites',
                 element: <FavoritePage />,
             },
         ],
