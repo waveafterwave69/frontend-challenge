@@ -32,10 +32,6 @@ const MainPage: FC = () => {
     }
 
     useEffect(() => {
-        getCatsData()
-    }, [])
-
-    useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries[0].isIntersecting && !isLoading && !error) {
