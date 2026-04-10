@@ -1,5 +1,4 @@
 import { useState, type FC } from 'react'
-import { Link } from 'react-router'
 
 import styles from './CatItem.module.css'
 
@@ -40,15 +39,13 @@ const CatItem: FC<CatItemProps> = ({ cat }) => {
             <div className={styles.image_wrapper}>
                 {isImgLoading && <div className={styles.skeleton} />}
 
-                <Link to={`/cats/${cat.id}`}>
-                    <img
-                        className={styles.cat__img}
-                        src={imageUrl}
-                        alt={cat.name}
-                        style={{ display: isImgLoading ? 'none' : 'block' }}
-                        onLoad={() => setIsImgLoading(false)}
-                    />
-                </Link>
+                <img
+                    className={styles.cat__img}
+                    src={imageUrl}
+                    alt={cat.name}
+                    style={{ display: isImgLoading ? 'none' : 'block' }}
+                    onLoad={() => setIsImgLoading(false)}
+                />
 
                 {/* Кнопка-сердечко */}
                 <button

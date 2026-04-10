@@ -8,13 +8,13 @@
 @media (max-width: 1024px) {
     .content__list {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 32px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .content__list {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 25px;
+        gap: 10px;
     }
 }

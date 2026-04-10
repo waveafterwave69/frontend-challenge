@@ -6,17 +6,17 @@
 }
 
 .loader {
-    width: 150px;
+    width: 140px;
 }
 
 @media (max-width: 1024px) {
     .loader {
-        width: 130px;
+        width: 120px;
     }
 }
 
 @media (max-width: 768px) {
     .loader {
-        width: 120px;
+        width: 90px;
     }
 }
