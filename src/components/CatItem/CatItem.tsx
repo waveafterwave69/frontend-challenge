@@ -1,21 +1,38 @@
 import { useState, type FC } from 'react'
-import styles from './CatItem.module.css'
-import type { CatData } from '../../types/cats'
 import { Link } from 'react-router'
+
+import styles from './CatItem.module.css'
+
+import type { CatData } from '../../types/cats'
+
+import { useAppDispatch, useAppSelector } from '../../hooks/useRTK'
+import {
+    addToFavorites,
+    deleteFromFavorites,
+} from '../../store/slices/favoriteSlice'
 
 interface CatItemProps {
     cat: CatData
 }
 
 const CatItem: FC<CatItemProps> = ({ cat }) => {
-    const [isFavorite, setIsFavorite] = useState(false)
     const [isImgLoading, setIsImgLoading] = useState(true)
+
+    const dispatch = useAppDispatch()
 
     const imageUrl =
         cat.image?.url || `https://thecatapi.com{cat.reference_image_id}.jpg`
 
+    const isFavorite = useAppSelector((state) =>
+        state.favorites.favoriteCats.some((fav) => fav.id === cat.id),
+    )
+
     const toggleFavorite = () => {
-        setIsFavorite(!isFavorite)
+        if (!isFavorite) {
+            dispatch(addToFavorites(cat))
+        } else {
+            dispatch(deleteFromFavorites(cat.id))
+        }
     }
 
     return (

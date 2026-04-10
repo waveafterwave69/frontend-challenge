@@ -1,6 +1,6 @@
 .skeleton {
-    width: 215px;
-    height: 215px;
+    width: 220px;
+    height: 220px;
     background-color: #e0e0e0;
     position: relative;
     overflow: hidden;
@@ -51,8 +51,8 @@
 
 .image_wrapper {
     position: relative;
-    width: 215px;
-    height: 215px;
+    width: 220px;
+    height: 220px;
 }
 
 .favorite_btn {

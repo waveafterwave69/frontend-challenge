@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom' // Используем createHashRouter
+import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom'
 import Header from './components/Header/Header'
 import MainPage from './pages/MainPage/MainPage'
 import FavoritePage from './pages/FavoritePage/FavoritePage'

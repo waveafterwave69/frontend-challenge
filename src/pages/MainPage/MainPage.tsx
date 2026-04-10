@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef, type FC } from 'react'
+
 import styles from './MainPage.module.css'
-import catsApi from '../../services/cats'
+
 import type { CatData } from '../../types/cats'
-import CatItem from '../../components/CatItem/CatItem'
+
+import catsApi from '../../services/cats'
 import Loader from '../../UI/Loader/Loader'
+import CatList from '../../components/CatList/CatList'
 
 const MainPage: FC = () => {
     const [cats, setCats] = useState<CatData[]>([])
@@ -51,11 +54,7 @@ const MainPage: FC = () => {
     return (
         <div className="container">
             <div className={styles.content}>
-                <ul className={styles.content__list}>
-                    {cats.map((cat: CatData, index) => (
-                        <CatItem key={`${cat.id}-${index}`} cat={cat} />
-                    ))}
-                </ul>
+                <CatList catList={cats} />
 
                 <div ref={observerTarget} className={styles.observer_target}>
                     {isLoading && <Loader />}

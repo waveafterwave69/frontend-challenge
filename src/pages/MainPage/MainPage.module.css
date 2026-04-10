@@ -32,13 +32,6 @@
     background-color: var(--color-hover);
 }
 
-.content__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
-    gap: 48px;
-    justify-items: center;
-}
-
 @media (max-width: 1024px) {
     .error_container {
         margin-top: 80px;
@@ -53,11 +46,6 @@
         padding: 10px;
         width: 250px;
         font-size: 16px;
-    }
-
-    .content__list {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 32px;
     }
 }
 
@@ -75,10 +63,5 @@
         padding: 10px;
         width: 250px;
         font-size: 16px;
-    }
-
-    .content__list {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 25px;
     }
 }
